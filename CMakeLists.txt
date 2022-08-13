@@ -664,6 +664,9 @@ ENDIF(ENABLE_STRICT_NULL_BYTE_HEADER_PADDING)
 # *
 ##
 SET(USE_HDF5 ${ENABLE_HDF5})
+# ITK-specific modification for HDF5 start
+#[[
+# ITK-specific modification for HDF5 end
 IF(USE_HDF5)
 
   ##
@@ -982,6 +985,10 @@ IF(USE_HDF5)
   INCLUDE_DIRECTORIES(${HDF5_HL_INCLUDE_DIR})
 
 ENDIF(USE_HDF5)
+]]
+# ITK-specific modification for HDF5 start
+INCLUDE_DIRECTORIES(${HDF5_INCLUDE_DIR})
+# ITK-specific modification for HDF5 end
 
 # See if we have libcurl
 FIND_PACKAGE(CURL)
