@@ -115,8 +115,10 @@ CONFIGURE_FILE(
   IMMEDIATE @ONLY)
 
 
-ADD_CUSTOM_TARGET(uninstall
-  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+# ITK-specific modification for HDF5 start
+# ADD_CUSTOM_TARGET(uninstall
+#   COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+# ITK-specific modification for HDF5 end
 
 ##
 # Customize some of the package component descriptions
