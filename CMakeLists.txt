@@ -1631,6 +1631,9 @@ IF(ENABLE_FILTER_TESTING)
   ENDIF()
 ENDIF()
 
+# ITK-specific modification for HDF5 start
+#[[
+# ITK-specific modification for HDF5 end
 IF(NOT BUILD_SHARED_LIBS)
   MESSAGE(WARNING "ENABLE_FILTER_TESTING requires shared libraries. Disabling.")
   SET(ENABLE_FILTER_TESTING OFF)
@@ -1644,6 +1647,9 @@ IF (NOT ENABLE_PLUGINS)
   MESSAGE(WARNING "ENABLE_FILTER_TESTING requires shared libraries. Disabling.")
   SET(ENABLE_NCZARR_FILTERS OFF CACHE BOOL "Enable NCZarr Filters." FORCE)
 ENDIF()
+# ITK-specific modification for HDF5 start
+#]]
+# ITK-specific modification for HDF5 end
 
 IF (NOT ENABLE_NCZARR)
   MESSAGE(WARNING "ENABLE_NCZARR==NO => ENABLE_NCZARR_FILTERS==NO AND ENABLE_NCZARR_FILTER_TESTING==NO")
